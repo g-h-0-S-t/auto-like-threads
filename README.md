@@ -8,7 +8,7 @@ No UI overlays, no page changes—just logs progress to Console.**
 
 ## How To Use
 
-1. **Copy the code below** as the bookmark’s URL (must start with `javascript:`).
+1. **Copy the code from the JS file** as the bookmark’s URL (must start with `javascript:`).
 2. **Open any page** with "Like" buttons, then click the bookmarklet.
 3. **Watch the progress in your browser’s console** (`F12` → Console tab).
 4. **To stop:** reload the page or close the tab.
