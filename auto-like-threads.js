@@ -1,6 +1,6 @@
 javascript:(function(){
-  /* Auto-Like Bookmarklet: scrolls and likes, never ends early, logs to console only */
-  var STEP=700,DELAY=900,IDLE_LIMIT=7,totalLiked=0,rounds=0,idle=0;
+  /* Infinite Auto-Like: scrolls and likes forever, logs to console only */
+  var STEP=700,DELAY=900,totalLiked=0,rounds=0;
   function clickLikes(){
     var liked=0;
     try{
@@ -19,18 +19,7 @@ javascript:(function(){
     var height=doc.scrollHeight;
     var client=doc.clientHeight;
     clickLikes();
-    if((currScroll+client)<(height-1)){
-      window.scrollBy(0,STEP);
-      idle=0;
-    }else{
-      idle++;
-      if(idle>=IDLE_LIMIT){
-        console.log('Auto-like finished! Page end detected. Total liked: '+totalLiked);
-        return;
-      }else{
-        console.log('Idle cycle '+idle+'; waiting for more. Total liked: '+totalLiked);
-      }
-    }
+    window.scrollBy(0,STEP);
     rounds++;
     setTimeout(scrollCycle,DELAY);
   }
